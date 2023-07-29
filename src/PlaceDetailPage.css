@@ -1,0 +1,23 @@
+.place-detail-page {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .place-detail-page {
+    padding: 10px;
+  }
+}

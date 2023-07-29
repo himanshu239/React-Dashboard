@@ -1,0 +1,26 @@
+.weather-page {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-detail {
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-detail p {
+    margin: 10px 0;
+}
+
+.weather-tip {
+    font-size: 0.8em;
+    color: #888;
+}

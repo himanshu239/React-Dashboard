@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
-//import Checklist from './Checklist';
-//import NoteTakingTool from './NoteTakingTool';
+import Stopwatch from './Stopwatch';
+import NoteTakingTool from './NoteTakingTool';
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
         <Route path='/dashboard/*' element={<Dashboard />} />
         <Route path="/tools" element={
           <div>
-            <Checklist />
-            <br />
             <NoteTakingTool />
+            <br />
+            <Stopwatch />
           </div>
         } />
       </Routes>

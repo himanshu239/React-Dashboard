@@ -4,13 +4,12 @@ import { FaTools } from 'react-icons/fa';
 import UserList from "./UserList";
 import UserProfile from "./UserProfile";
 import './Dashboard.css';
+import UserInfoWidget from './UserInfoWidget';
+import UserInfoDetailPage from './UserInfoDetailPage';
+import NearbyPlacesWidget from './NearbyPlacesWidget';
+import NearbyPlaceDetailPage from './NearbyPlaceDetailPage';
 import WeatherWidget from './WeatherWidget';
 import WeatherPage from './WeatherPage';
-import BitcoinWidget from './BitcoinWidget';
-import BitcoinDetails from './BitcoinDetails';
-import PopulationDetail from './PopulationDetail';
-import PopulationWidget from './PopulationWidget';
-
 const Dashboard = () => {
     return (
         <div className="dashboard">
@@ -27,20 +26,21 @@ const Dashboard = () => {
                     <UserList />
                 </div>
                 <div className="widget">
+                    <UserInfoWidget />
+                </div>
+                <div className="widget">
+                    <NearbyPlacesWidget />
+                </div>
+                <div className="widget">
                     <WeatherWidget />
                 </div>
-                <div className="widget">
-                    <BitcoinWidget />
-                </div>
-                <div className="widget">
-                    <PopulationWidget />
-                </div>
+              
             </div>
             <div className="sidebar">
                 <h2>API Details</h2>
+                <UserInfoDetailPage />
+                <NearbyPlaceDetailPage/>
                 <WeatherPage />
-                <BitcoinDetails />
-                <PopulationDetail />
             </div>
         </div>
     );
