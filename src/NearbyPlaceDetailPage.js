@@ -1,15 +1,21 @@
+// Importing necessary modules and hooks
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './PlaceDetailPage.css'; // Import CSS file for page styling
+import './PlaceDetailPage.css'; 
 
+
+// Defining the NearbyPlaceDetailPage function component
 const NearbyPlaceDetailPage = () => {
+
+    // Using the useState hook to manage place data
   const [placeData, setPlaceData] = useState(null);
 
+  // Using the useEffect hook to fetch place data when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get('http://geodb-free-service.wirefreethought.com/v1/geo/places/10733/nearbyPlaces');
-        setPlaceData(response.data.data[0]); // Assuming we are using the first place from the API response
+        setPlaceData(response.data.data[0]); 
       } catch (error) {
         console.error('Error fetching place data:', error);
       }
@@ -18,6 +24,7 @@ const NearbyPlaceDetailPage = () => {
     fetchData();
   }, []);
 
+  // If place data has not yet been fetched, display a loading message
   if (!placeData) {
     return <div>Loading...</div>;
   }
@@ -33,6 +40,7 @@ const NearbyPlaceDetailPage = () => {
     distance,
   } = placeData;
 
+    // Rendering the NearbyPlaceDetailPage component
   return (
     <div className="place-detail-page">
       <h2>{name}</h2>

@@ -1,5 +1,7 @@
+// Importing necessary modules and hooks
 import { auth } from './firebase';
 
+// Defining the UserProfile function component
 const UserProfile = () => {
   const user = auth.currentUser;
 

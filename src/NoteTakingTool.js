@@ -1,7 +1,11 @@
+// Importing necessary React hooks
 import React, { useState } from "react";
 import './NoteTakingTool.css';
 
+// Defining the NoteTakingTool function component
 const NoteTakingTool = () => {
+
+    // Using the useState hook to manage the current note and note list
     // State for the note input field
     const [inputNote, setInputNote] = useState("");
 
@@ -26,6 +30,7 @@ const NoteTakingTool = () => {
         setInputNote("");
     }
 
+    // Rendering the NoteTakingTool component
     return (
         <div className="note-taking-tool-container">
             <h1>Simple Note-taking Tool</h1>

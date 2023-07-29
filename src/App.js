@@ -1,4 +1,8 @@
+// Importing necessary modules from react-router-dom
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
+// Importing necessary components
 import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
@@ -10,8 +14,10 @@ import WeatherPage from './WeatherPage';
 
 function App() {
   return (
+    // Using the Router component to wrap the application and allow for routing
     <Router>
       <Routes>
+        {/* Defining a Route for the Login page at the default path */}
         <Route path="/" element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/dashboard/*' element={<Dashboard />} />
@@ -29,5 +35,5 @@ function App() {
     </Router>
   );
 }
-
+// Exporting the App component as the default export
 export default App;

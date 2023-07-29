@@ -1,3 +1,4 @@
+// Importing necessary modules and hooks
 import React, { useState } from 'react';
 import { auth, firestore } from './firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
@@ -5,12 +6,16 @@ import { collection, addDoc } from "firebase/firestore";
 import { Link } from 'react-router-dom';
 import './Register.css';
 
+// Defining the Register function component
 const Register = () => {
+
+    // Using the useState hook to manage form inputs and error message
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
 
+        // Function to handle sign up
     const handleSignUp = async (event) => {
         event.preventDefault();
         try {
@@ -29,7 +34,7 @@ const Register = () => {
             setError('Error signing up with email and password');
         }
     };
-
+// Rendering the Register component
     return (
         <div className="container">
             <h1>Register</h1>

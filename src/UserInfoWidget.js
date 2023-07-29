@@ -1,9 +1,14 @@
+// Importing necessary modules and hooks
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// Defining the UserInfoWidget function component
 const UserInfoWidget = () => {
+
+  // Using the useState hook to manage user data
   const [userData, setUserData] = useState(null);
 
+  // Using the useEffect hook to fetch user data when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -23,6 +28,7 @@ const UserInfoWidget = () => {
 
   const { name, gender, location, email, picture } = userData;
 
+   // Rendering the UserInfoWidget component
   return (
     <div className="user-info-widget">
       <h2>User Information</h2>

@@ -1,3 +1,4 @@
+// Importing necessary modules and components
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaTools } from 'react-icons/fa';
@@ -10,8 +11,10 @@ import NearbyPlacesWidget from './NearbyPlacesWidget';
 
 import WeatherWidget from './WeatherWidget';
 
-
+// Defining the Dashboard function component
 const Dashboard = () => {
+
+    // Rendering the Dashboard component
     return (
         <div className="dashboard">
             <nav className="navbar">

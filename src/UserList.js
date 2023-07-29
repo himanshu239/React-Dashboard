@@ -1,9 +1,13 @@
+// Importing necessary modules and hooks
 import { firestore } from './firebase';
 import React, { useState, useEffect } from 'react';
 import { collection, getDocs } from "firebase/firestore";
 import { auth } from './firebase';
 
+// Defining the UserList function component
 const UserList = () => {
+
+      // Using the useState hook to manage user list data
     const [users, setUsers] = useState([]);
     const user = auth.currentUser;
     const fetchUsers = async () => {
@@ -19,6 +23,7 @@ const UserList = () => {
             })
 
     }
+    // Using the useEffect hook to fetch user list data when the component mounts
     useEffect(() => {
         fetchUsers();
     }, []);

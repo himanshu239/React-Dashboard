@@ -1,12 +1,17 @@
+// Importing necessary modules and hooks
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './UserInfoDetailPage.css'; // Import CSS file for styling
+import './UserInfoDetailPage.css'; 
 
+// Defining the UserInfoDetailPage function component
 const UserInfoDetailPage = () => {
   const { userId } = useParams();
+
+  // Using the useState hook to manage user data
   const [userData, setUserData] = useState(null);
 
+  // Using the useEffect hook to fetch user data when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -20,12 +25,14 @@ const UserInfoDetailPage = () => {
     fetchData();
   }, [userId]);
 
+  // If user data has not yet been fetched, display a loading message
   if (!userData) {
     return <div>Loading...</div>;
   }
 
   const { name, gender, location, email, dob, phone, cell, picture } = userData;
 
+  // Rendering the UserInfoDetailPage component
   return (
     <div className="user-info-detail">
       <h2>User Information Detail</h2>
@@ -41,7 +48,6 @@ const UserInfoDetailPage = () => {
           <p><b>Phone:</b> {phone}</p>
           <p><b>Cell:</b> {cell}</p>
           <p><b>Location:</b> {`${location.city}, ${location.country}`}</p>
-          {/* You can display more relevant data here */}
         </div>
       </div>
     </div>

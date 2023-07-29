@@ -1,15 +1,21 @@
+
+// Importing necessary modules and hooks
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from './firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import './Login.css';
 
+// Defining the Login function component
 const Login = () => {
+
+  // Using the useState hook to manage form inputs and error message
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  // Function to handle login
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
@@ -23,6 +29,7 @@ const Login = () => {
     }
   };
 
+  // Rendering the Login component
   return (
     <div className="container">
       <h1>Login</h1>
