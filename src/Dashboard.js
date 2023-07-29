@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaTools } from 'react-icons/fa';
 import UserList from "./UserList";
 import UserProfile from "./UserProfile";
-import './Dashboard.css';
+import './General.css';
 import UserInfoWidget from './UserInfoWidget';
 import UserInfoDetailPage from './UserInfoDetailPage';
 import NearbyPlacesWidget from './NearbyPlacesWidget';

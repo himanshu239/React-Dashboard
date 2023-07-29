@@ -19,14 +19,15 @@ function WeatherWidget() {
     }
 
     return (
-        <div>
-            <h1>Weather Data</h1>
-            <p>Temperature: {weatherData.current_weather.temperature}</p>
-            <p>Wind Speed: {weatherData.current_weather.windspeed}</p>
-            <p>Wind Direction: {weatherData.current_weather.winddirection}</p>
+        <div className="widget">
+            <h3>Weather Data</h3>
+            <p><b>Temperature:</b> {weatherData.current_weather.temperature}°C</p>
+            <p><b>Wind Speed:</b> {weatherData.current_weather.windspeed} km/h</p>
+            <p><b>Wind Direction:</b> {weatherData.current_weather.winddirection}</p>
             {/* You can display more data as needed */}
         </div>
     );
 }
 
 export default WeatherWidget;
+
