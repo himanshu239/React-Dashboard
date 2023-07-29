@@ -5,11 +5,12 @@ import UserList from "./UserList";
 import UserProfile from "./UserProfile";
 import './General.css';
 import UserInfoWidget from './UserInfoWidget';
-import UserInfoDetailPage from './UserInfoDetailPage';
+
 import NearbyPlacesWidget from './NearbyPlacesWidget';
-import NearbyPlaceDetailPage from './NearbyPlaceDetailPage';
+
 import WeatherWidget from './WeatherWidget';
-import WeatherPage from './WeatherPage';
+
+
 const Dashboard = () => {
     return (
         <div className="dashboard">
@@ -34,16 +35,16 @@ const Dashboard = () => {
                 <div className="widget">
                     <WeatherWidget />
                 </div>
-              
             </div>
             <div className="sidebar">
                 <h2>API Details</h2>
-                <UserInfoDetailPage />
-                <NearbyPlaceDetailPage/>
-                <WeatherPage />
+                <Link to="/user-info" className="sidebar-link">User Info Details</Link>
+<Link to="/nearby-places" className="sidebar-link">Nearby Places Details</Link>
+<Link to="/weather" className="sidebar-link">Weather Details</Link>
             </div>
         </div>
     );
 }
 
 export default Dashboard;
+

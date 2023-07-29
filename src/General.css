@@ -87,6 +87,22 @@ body {
   margin-bottom: 30px;
 }
 
+.sidebar-link {
+  display: block;
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #f8f9fa;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-link:hover {
+  background-color: #e9ecef;
+}
+
+
 /* Widget styles */
 
 .widget {

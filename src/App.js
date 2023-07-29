@@ -4,6 +4,9 @@ import Register from './Register';
 import Dashboard from './Dashboard';
 import Stopwatch from './Stopwatch';
 import NoteTakingTool from './NoteTakingTool';
+import UserInfoDetailPage from './UserInfoDetailPage';
+import NearbyPlaceDetailPage from './NearbyPlaceDetailPage';
+import WeatherPage from './WeatherPage';
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/dashboard/*' element={<Dashboard />} />
+        <Route path="/user-info" element={<UserInfoDetailPage />} />
+        <Route path="/nearby-places" element={<NearbyPlaceDetailPage />} />
+        <Route path="/weather" element={<WeatherPage />} />
         <Route path="/tools" element={
           <div>
             <NoteTakingTool />
