@@ -1,0 +1,17 @@
+.user-profile {
+    background-color: #fff; /* white background */
+    border: 1px solid #ddd; /* border around the profile */
+    border-radius: 4px; /* rounded corners */
+    padding: 20px; 
+    margin-bottom: 20px; /* space between widgets */
+    text-align: center; /* center the text */
+}
+
+.user-profile h2 {
+    color: #333; /* dark grey color for the name */
+    margin-bottom: 0.5em; /* space between the name and the email */
+}
+
+.user-profile p {
+    color: #666; /* lighter grey color for the email */
+}

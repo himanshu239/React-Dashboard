@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
 import Dashboard from './Dashboard';
-import Checklist from './Checklist';
-import NoteTakingTool from './NoteTakingTool';
+//import Checklist from './Checklist';
+//import NoteTakingTool from './NoteTakingTool';
 
 function App() {
   return (

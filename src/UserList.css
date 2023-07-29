@@ -1,0 +1,27 @@
+.user-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between user cards */
+}
+
+.user-card {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Border around the card */
+    border-radius: 4px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* A little shadow for depth */
+    transition: box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.user-card:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Bigger shadow when hovered */
+}
+
+.user-card h2 {
+    color: #333; /* Dark grey color for the name */
+    margin-bottom: 0.5em; /* Space between the name and the email */
+}
+
+.user-card p {
+    color: #666; /* Lighter grey color for the email */
+}
